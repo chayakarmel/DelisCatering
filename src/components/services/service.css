@@ -1,0 +1,39 @@
+.service{
+    display: grid; 
+    grid-template-columns: repeat(4,1fr);
+    gap: 2%;
+    row-gap: 4%;
+    margin: 2% ;
+    text-align: center;
+}
+
+/* .MuiPaper-root{
+font-family: 'Assistant' !important;
+    color: #f39428;
+    background-color: black;
+} */
+.MuiPaper-root .MuiPaper-elevation .MuiPaper-rounded .MuiPaper-elevation1 .MuiCard-root .css-1d9ctjl-MuiPaper-root-MuiCard-root{
+    font-family: 'Assistant' !important;
+    color: #f39428 ;
+    background-color: black ;
+}
+.css-1d9ctjl-MuiPaper-root-MuiCard-root {
+    font-family: 'Assistant' !important;
+    color: #f39428 ;
+    background-color: black ;
+
+}
+#addService{
+    /* display: block;
+    max-width: none;
+    text-align: center; */
+    position: absolute;
+    left: 4%;
+    /* bottom:5%;
+    bottom: auto;
+    width: 256px;
+    height: 151px;
+    z-index: 200; */
+
+    /* margin: 1%; */
+}

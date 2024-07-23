@@ -1,0 +1,51 @@
+.appointmentList
+{
+
+        display: grid; 
+        grid-template-columns: repeat(3,1fr);
+        gap: 2%;
+        row-gap: 4%;
+        margin: 2% ;
+        text-align: center;
+   
+}
+#input{
+        background-color: white;
+        /* padding: 0.09%; */
+        width: 10%;
+       
+}
+.appointment{
+      
+    color:white;
+    background-color:'black';
+    padding: 3%;
+    border: solid white;
+    font-size: 28px;
+    font-family:"Roboto","Helvetica","Arial",sans-serif;;
+    
+}
+.later {
+        color: greenyellow;
+        background-color: black;
+        /* border: solid greenyellow ; */
+
+
+
+
+}
+
+.today {
+        color: red;
+        background-color: black;
+        /* border: solid red; */
+
+
+}
+
+.thisWeek {
+        color: orange;
+        background-color: black;
+        /* border: solid orange; */
+
+}

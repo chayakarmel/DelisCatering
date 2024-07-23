@@ -1,0 +1,32 @@
+.button-container {
+    display: flex;
+    justify-content: flex-start;
+    /* z-index: 1000000; */
+    margin-top:20%;
+    margin-right: 10%;
+  }
+  
+  /* .button-container button {
+    margin-right: 10px;
+  } */
+  #buttons{
+    display: flex;
+    justify-content: center;
+    margin: 2%;
+    gap: 1%;
+    
+  }
+  button{
+    margin: 5%,6%;
+  }
+ body{
+  color: white !important;
+  background-color: black !important;
+ }
+ #container{
+  background-color: white !important;
+ }
+ .css-17vbkzs-MuiFormControl-root-MuiTextField-root {
+  background-color: white;
+ }
+ 

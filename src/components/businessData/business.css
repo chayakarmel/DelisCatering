@@ -1,0 +1,52 @@
+.header{
+    display: flex;
+    flex-direction:column;
+  
+    font-size: 30px;
+    text-align: center;
+
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    background-color: #000000;
+   
+    
+}
+h2{
+  margin: 0%;
+}
+p{
+  margin: 0%;
+}
+div{
+  margin: 0%;
+}
+
+#logo{
+  display: block;
+  max-width: none;
+  text-align: center;
+  
+  position: absolute;
+    right: 4%;
+    top:auto;
+    bottom: auto;
+    width: 256px;
+    height: 151px;
+    z-index: 200;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#img-header{
+  width: 100%;
+  height: auto;
+}
+#edit{
+ 
+    position: absolute;
+    right: 4%;
+ 
+
+}
+
+
