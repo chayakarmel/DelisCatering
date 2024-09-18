@@ -14,7 +14,7 @@ const AppointmentList = (observer(() => {
     useEffect(() => {
 
         if (!dataStore.appointments.length > 0) {
-            getAppointment()
+            getAppointment();
         }
 
     }, [])

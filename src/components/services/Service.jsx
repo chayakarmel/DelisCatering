@@ -18,8 +18,9 @@ const Service = ({ service }) => {
           <CardHeader
             title={service.name}
           />
+
              <Typography >
-             {service.descripition}
+             {service.description}
             </Typography>
           
           <CardMedia 

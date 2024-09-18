@@ -7,7 +7,6 @@ import dataStore from '../../data/dataStore';
 import './service.css'
 
 const ServicesList = (observer(() => {
-
     useEffect(() => {
         if (!dataStore.services.length) {
             getServices()

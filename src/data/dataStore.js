@@ -13,7 +13,7 @@ class DataStore {
     appointments = [];
     isAppointment = true;
     //פרטי עסק
-    businessDatas = {};
+    businessDatas = [];
 
 
 
@@ -39,6 +39,7 @@ class DataStore {
             //--------------BusinessData--------------
             businessDatas: observable,
             setBusinessData: action,
+            getBusinessDatas:action,
         })
     }
 
@@ -74,17 +75,15 @@ class DataStore {
         this.isAppointment = status;
     }
 
+    getBusinessDatas = (data) => {
+        this.businessDatas = [...data];
+    }
+
 
     setBusinessData = (data) => {
-        console.log(data, "dataaaaa")
-        if (Object.entries(data).keys.length) {
-            this.businessDatas = defaultBusinessData;
-        }
-        else {
-            this.businessDatas = data;
-        }
-
-        console.log(this.businessDatas)
+        console.log(data, "data")
+    
+        this.businessDatas = [...data];
 
     }
 
@@ -104,24 +103,26 @@ const defaultBusinessData = {
 
 };
 
-const servicees = [{
-    name: "בר מתוקים",
-    descripition: "לארוע מתוק ",
-    price: '60',
-    img: "https://delis.co.il/contentManagment/uploadedFiles/new%20photo%202020%20975/DSC_2486_975.jpg"
-}, {
-    name: "משלוחי מנות",
-    descripition: "משלוח מחמם לב ",
-    price: '130',
-    img: "https://www.delis.co.il/contentManagment/uploadedFiles/home%20page%20long%202020/DSC_4283_1920_572_2.jpg"
-}, {
-    name: "חלבי",
-    descripition: "תפריט מדהים ",
-    price: '55',
-    img: "https://delis.co.il/contentManagment/uploadedFiles/new%20photo%202020%20975/DSC_1138_975_650.jpg"
-}, {
-    name: "מארזי אירוח",
-    descripition: "לשמח את מי שאוהבים ",
-    price: '60',
-    img: "https://www.delis.co.il/contentManagment/uploadedFiles/new%20photo%202020%20975/DSC_4424_975.jpg"
-}]
+const servicees = [
+    {
+        name: "בר מתוקים",
+        descripition: "לארוע מתוק ",
+        price: '60',
+        img: "https://delis.co.il/contentManagment/uploadedFiles/new%20photo%202020%20975/DSC_2486_975.jpg"
+    }, {
+        name: "משלוחי מנות",
+        descripition: "משלוח מחמם לב ",
+        price: '130',
+        img: "https://www.delis.co.il/contentManagment/uploadedFiles/home%20page%20long%202020/DSC_4283_1920_572_2.jpg"
+    }, {
+        name: "חלבי",
+        descripition: "תפריט מדהים ",
+        price: '55',
+        img: "https://delis.co.il/contentManagment/uploadedFiles/new%20photo%202020%20975/DSC_1138_975_650.jpg"
+    }, {
+        name: "מארזי אירוח",
+        descripition: "לשמח את מי שאוהבים ",
+        price: '60',
+        img: "https://www.delis.co.il/contentManagment/uploadedFiles/new%20photo%202020%20975/DSC_4424_975.jpg"
+    }
+]

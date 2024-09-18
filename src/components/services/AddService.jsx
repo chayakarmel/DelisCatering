@@ -17,7 +17,7 @@ import './service.css';
 const AddService = (observer(() => {
 
 
-    const [service, setService] = useState({ name: "", descripition: "", price: "", img: "" });
+    const [service, setService] = useState({ name: "", description: "", price: "", img: "" });
 
     const [open, setOpen] = React.useState(false);
 
@@ -26,14 +26,25 @@ const AddService = (observer(() => {
     };
 
     const handleSubmit = (e) => {
-        e.preventDefault()
+        e.preventDefault();
+        
+        // קבלת הטוקן (נניח מ-localStorage)
+        const token = localStorage.getItem('token');
 
-        addService(service);
-        setService({ name: "", descripition: "", price: "", img: "" });
-        setOpen(false);
-    }
+        if (token) {
+            addService(service, token);
+            setService({ name: "", description: "", price: "", img: "" });
+            setOpen(false);
+        } else {
+            setOpen(false);
+            alert("אינך מורשה לבצע פעולה זו");
+            console.error('No token found');
+        }
+    };
+
+    
     const handleClose = () => {
-        setService({ name: "", descripition: "", price: "", img: "" });
+        setService({ name: "", description: "", price: "", img: "" });
         setOpen(false);
     };
 
@@ -68,8 +79,8 @@ const AddService = (observer(() => {
                                 <TextField label="שם השירות" variant="outlined" value={service.name}
                                     onChange={(e) => setService({ ...service, name: e.target.value })} />
 
-                                <TextField label="תיאור" variant="outlined" value={service.descripition}
-                                    onChange={(e) => setService({ ...service, descripition: e.target.value })} />
+                                <TextField label="תיאור" variant="outlined" value={service.description}
+                                    onChange={(e) => setService({ ...service, description: e.target.value })} />
 
                                 <TextField label="מחיר למנה " variant="outlined" type="number" value={service.price}
                                     onChange={(e) => setService({ ...service, price: e.target.value })} />

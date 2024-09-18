@@ -25,7 +25,7 @@
     font-family:"Roboto","Helvetica","Arial",sans-serif;;
     
 }
-.later {
+#later {
         color: greenyellow;
         background-color: black;
         /* border: solid greenyellow ; */
@@ -35,7 +35,7 @@
 
 }
 
-.today {
+#today {
         color: red;
         background-color: black;
         /* border: solid red; */
@@ -43,7 +43,7 @@
 
 }
 
-.thisWeek {
+#thisWeek {
         color: orange;
         background-color: black;
         /* border: solid orange; */

@@ -74,7 +74,7 @@ const AddAppointment = (observer(() => {
         <React.Fragment>
 
             <button variant="outlined" onClick={handleClickOpen}>
-                הזמנת ארוע
+                הזמנת אירוע
             </button>
             <Dialog
                 open={open}

@@ -5,7 +5,6 @@ import './Appointment.css'
 
 const Appointment = ({ appointment }) => {
   let color = 'later';
-  
 
   if (
     new Date(appointment.date).setHours(0, 0, 0, 0) == new Date().setHours(0, 0, 0, 0)) {
@@ -16,6 +15,7 @@ const Appointment = ({ appointment }) => {
 
     new Date(appointment.date) < new Date().setDate(new Date().getDate() + 7)) {
     color = 'thisWeek';
+
     
   }
 
@@ -23,7 +23,7 @@ const Appointment = ({ appointment }) => {
     <>
       
         <div className='appointment' >
-          <p className={`${color}`}>{new Date(appointment.date)?.toLocaleDateString()}</p>
+          <p id={`${color}`}>{new Date(appointment.date)?.toLocaleDateString()}</p>
           <p>{appointment.service}</p>
           <p>מספר מנות :{appointment.qty}</p>
           <p> {appointment.name}</p>

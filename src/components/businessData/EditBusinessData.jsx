@@ -12,7 +12,7 @@ import EditIcon from '@mui/icons-material/Edit';
 
 import { observer } from 'mobx-react'
 import { useState } from 'react';
-import { addBusinessData } from '../../data/server';
+import { editBusinessData } from '../../data/server';
 import dataStore from '../../data/dataStore'
 import './business.css';
 
@@ -20,6 +20,8 @@ import './business.css';
 
 
 const EditBusinessData = (observer(() => {
+
+    
 
     const [BD, setBD] = useState(dataStore.businessDatas);
 
@@ -33,9 +35,10 @@ const EditBusinessData = (observer(() => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log(BD)
-        addBusinessData(BD);
+        console.log(BD,"העסק החדש")
+        editBusinessData(BD._id,BD);
         setOpen(false);
+        
     }
 
     const handleClose = () => {
